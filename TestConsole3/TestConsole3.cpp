@@ -2,13 +2,16 @@
 // 크리티컬 히트는 150 %
 
 #include <iostream>
+#include <cstdlib>
 
 float CritDamage(float damage)
 {
-    return damage * 1.5;
+    float CritDamage = damage * 1.5;
+    return CritDamage;
+
 }
 
 int main()
 {
-    printf("크리티컬 데미지 : %f \n", CritDamage(100));
+    printf("크리티컬 데미지 : %.0f%% \n", CritDamage(100));
 }

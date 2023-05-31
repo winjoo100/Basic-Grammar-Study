@@ -16,9 +16,9 @@ int main()
 
 	int heal = 10000;
 
-	int doHeal = DoHeal(current_Hp, heal);
+	int nowHp = DoHeal(current_Hp, heal);
 
-	current_Hp = doHeal > maxHp ? maxHp : doHeal;
+	current_Hp = nowHp > maxHp ? maxHp : nowHp;
 
 
 	printf("힐량 : %d\n", heal);

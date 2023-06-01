@@ -33,4 +33,3 @@ int main()
     printf("나눗셈 : %.1f / %.1f = %.1f\n", num1, num2, DivNum(num1, num2));
     printf("나머지 : %.1f %% %.1f = %d\n", num1, num2, ModNum(num1, num2));
 }
-

@@ -38,7 +38,7 @@ void CharCheck(char playerInputNumber)
 // 특수 문자만 출력
 void CheckSpecialChar(char playerInputNumber)
 {
-    ((playerInputNumber >= '!' && playerInputNumber <= '/') || (playerInputNumber >= ':' && playerInputNumber <= '?') ||
+    ((playerInputNumber >= '!' && playerInputNumber <= '/') || (playerInputNumber >= ':' && playerInputNumber <= '@') ||
         (playerInputNumber >= '[' && playerInputNumber <= '`') || (playerInputNumber >= '{' && playerInputNumber <= '~')) ?
         printf("\n%c 는 특수문자입니다.\n", playerInputNumber) : printf("\n%c 는 특수문자가 아닙니다.\n", playerInputNumber);
 }

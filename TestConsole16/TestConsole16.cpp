@@ -18,6 +18,7 @@ int main()
 	const int diceRange = 101;					// 주사위 값을 0 ~ 100 까지
 	int randomDice;								// 치명타 확률을 랜덤 주사위에 따라 결정되게함
 	bool isCritical_hit;						// 치명타의 여부
+	char quit;									// 게임을 종료하기 위한 변수
 
 	srand(time(NULL));							// rand() 함수의 키 값을 바꿔줌
 
@@ -67,11 +68,23 @@ int main()
 			printf("가한 데미지 : %d\n", playerDamage);
 		}
 
-		// 게임 종료
-
+		// 공격 종료
 		printf("\n\n\n\n\n\n\n\n\n\n");
-		printf("아무키나 눌러 다시 실행하세요 .......");
-		_getch();
-		system("cls");	// 콘솔화면을 클리어합니다.
+		printf("아무키나 눌러 다시 실행하세요 .......\n");
+
+		// x를 누르면 게임 종료
+		printf("종료하려면 X 를 누르세요.");
+		quit = _getch();
+
+		if (quit == 'x' || quit == 'X')
+		{
+			printf("\n\n종료합니다.\n");
+			break;
+		}
+
+		else
+		{
+			system("cls");	// 콘솔화면을 클리어합니다.
+		}
 	}
 }

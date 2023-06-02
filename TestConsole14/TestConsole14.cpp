@@ -1,5 +1,5 @@
 ﻿#include <iostream>					
-#include <conio.h>			// 
+#include <conio.h>			
 
 int main()
 {
@@ -7,7 +7,7 @@ int main()
 	char userInput = 0;
 
 	printf("User Input : ");
-	userInput = _getch();
+	userInput = _getch();		// _getch() 문자 하나 입력받을 때 쓰는 함수, scanf_s에서 입력받는 것과 달리 엔터가 필요없음
 
 	printf("%c", userInput);
 	printf("\n\n");

@@ -66,6 +66,12 @@ int main()
 			printf("\n----------치명타 실패!----------\n");
 			printf("가한 데미지 : %d\n", playerDamage);
 		}
-		printf("\n\n");
+
+		// 게임 종료
+
+		printf("\n\n\n\n\n\n\n\n\n\n");
+		printf("아무키나 눌러 다시 실행하세요 .......");
+		_getch();
+		system("cls");	// 콘솔화면을 클리어합니다.
 	}
 }

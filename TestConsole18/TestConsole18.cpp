@@ -13,8 +13,12 @@ int main()
 	// * * * * * 찍기
 	for (int a = 0; a < 5; a++)
 	{
+		board[a] = '*';
 		printf("%c ", board[a]);
 	}
+
+	_getch();
+	system("cls");
 
 	// 0 * * * * 에서 오른쪽으로 0이 한칸씩 이동하기
 	for (int i = 0; i < 5; i++)

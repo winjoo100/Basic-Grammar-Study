@@ -656,7 +656,7 @@ void Bat_Art()
 	printf("/.-\' jgs   `\\(-V-)/`       `-.\\				\n");
 	printf("`            \"   \"            `				\n");
 }
-
+// 곰 이미지
 void Bear_Art()
 {
 	printf("    ╭─────╮    \n");
@@ -669,7 +669,7 @@ void Bear_Art()
 	printf("  │ ╭╚═══╝╮ │  \n");
 	printf("  ╰─╯     ╰─╯   \n");
 }
-
+// 슬라임 이미지
 void Slime_Art()
 {
 	printf(" ╭────╮ \n");

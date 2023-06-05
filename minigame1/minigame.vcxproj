@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5b76373a-1d1c-4499-a5d0-9f327c5c9458}</ProjectGuid>
-    <RootNamespace>MiniGame</RootNamespace>
+    <ProjectGuid>{f5f72863-8014-4b7d-b4b7-b4a282a6893e}</ProjectGuid>
+    <RootNamespace>minigame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MiniGame.cpp" />
+    <ClCompile Include="minigame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

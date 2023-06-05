@@ -44,7 +44,7 @@ int main()
 
 	int randomMapDice;			// 강 산 길을 가기 위한 주사위 값 저장 변수
 	int randombattleOrHeal;		// 40%의 확률로 전투, 60%의 확률로 플레이어 회복
-
+	
 	int loadCount = 0;	// 길을 몇 번 걸었는지 확인하는 변수
 	int mountCount = 0;	// 산을 몇 번 올랐는지 확인하는 변수
 	int riverCount = 0; // 강을 몇 번 들렀는지 확인하는 변수
@@ -52,7 +52,7 @@ int main()
 	int randomRiverEvent;		// 강에서 랜덤한 이벤트 확률을 저장하기 위한 변수
 
 	int battleCount = 0; // 전투를 몇 번 했는지 확인하는 변수
-
+	
 
 
 	// 게임 시작 도입부
@@ -96,10 +96,10 @@ int main()
 		// 랜덤 값을 이용해 주사위를 굴림 1 ~ 10;
 		srand(time(NULL));
 		randomMapDice = (rand() % randomDiceRange) + 1;
-
+		
 		printf("\n\n\n\n");
 		// 콘솔화면을 초기화함
-		system("cls");
+		system("cls");	
 
 		// 주사위의 값에 따라 맵 이동
 		if (randomMapDice > 0 && randomMapDice <= 3)
@@ -201,7 +201,7 @@ int main()
 				{
 					playerHp = playertMaxHp;
 				}
-
+				
 				printf("현재 플레이어의 체력 : %d 입니다.\n\n", playerHp);
 
 				MountainHeal_Art();
@@ -210,7 +210,7 @@ int main()
 			}
 
 			// 나머지의 값일 경우 몬스터와 전투하는 로직
-			else
+			else 
 			{
 				playerHp = MonsterBattle(playerHp, playerDamage);
 				battleCount += 1;
@@ -246,7 +246,7 @@ int main()
 		}
 
 	}
-
+	
 
 
 }	// main() 함수 끝
@@ -282,14 +282,14 @@ int MonsterBattle(int playerHp, int playerDamage)
 	bool monsterAlive = false;
 
 	printf("전투가 시작되었습니다.\n");
-
+	
 	// 랜덤 값을 이용해 등장하는 몬스터를 다르게 하는 로직
 	srand(time(NULL));
 	randomSelectMonster = (rand() % randomSelectMonsterRange) + 1;
 
 	switch (randomSelectMonster)
 	{
-		// 랜덤 값이 1일 경우 박쥐와 전투하는 로직
+	// 랜덤 값이 1일 경우 박쥐와 전투하는 로직
 	case 1:
 		monsterAlive = true;
 		printf("박쥐가 나타났습니다.\n\n");
@@ -304,7 +304,7 @@ int MonsterBattle(int playerHp, int playerDamage)
 			printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
 			monsterBatHp = monsterBatHp - playerDamage;
 			Sleep(500);
-
+			
 			if (monsterBatHp <= 0)
 			{
 				printf("박쥐의 남은 체력 : 0\n\n");
@@ -313,7 +313,7 @@ int MonsterBattle(int playerHp, int playerDamage)
 				printf("박쥐를 처치했습니다!\n");
 				printf("전투가 종료되었습니다\n\n");
 				printf("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n\n");
-
+				
 				ReturnToMapSelect();
 			}
 
@@ -340,7 +340,7 @@ int MonsterBattle(int playerHp, int playerDamage)
 		}
 		break;
 
-		// 랜덤 값이 2일 경우 곰과 전투합니다.
+	// 랜덤 값이 2일 경우 곰과 전투합니다.
 	case 2:
 		monsterAlive = true;
 		printf("야생의 곰이 나타났습니다.\n\n");
@@ -355,7 +355,7 @@ int MonsterBattle(int playerHp, int playerDamage)
 			printf("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ\n");
 			monsterBearHp = monsterBearHp - playerDamage;
 			Sleep(500);
-
+			
 
 			if (monsterBearHp <= 0)
 			{
@@ -392,7 +392,7 @@ int MonsterBattle(int playerHp, int playerDamage)
 		}
 		break;
 
-		// 랜덤 값이 2일 경우 슬라임과 전투합니다.
+	// 랜덤 값이 2일 경우 슬라임과 전투합니다.
 	case 3:
 		monsterAlive = true;
 		printf("푸르댕댕 슬라임이 나타났습니다.\n\n");
@@ -676,5 +676,5 @@ void Slime_Art()
 	printf(" │\\_/│ \n");
 	printf(" │    │ \n");
 	printf("─┴────┴─\n");
-
+	
 }
